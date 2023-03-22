@@ -1,0 +1,407 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.header {
+  border-radius: 0px 0px 40px 40px;
+}
+
+.bg {
+  background: linear-gradient(90deg, rgb(66, 66, 66) 0%, rgb(66, 66, 66) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+.custom_bg {
+  background: linear-gradient(90deg, rgb(66, 66, 66) 0%, rgb(66, 66, 66) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+p {
+  margin: 0;
+}
+
+.margin {
+  margin: 0;
+}
+
+.bg_color1 {
+  background-color: rgb(66, 66, 66);
+}
+
+.your_message {
+  border-radius: 1rem 1rem 0rem 1rem;
+  background-color: #2F70FF;
+  width: 70%;
+  margin: 0px 0px 0px auto;
+}
+
+.their_message {
+  border-radius: 1rem 1rem 1rem 0rem;
+  background-color: rgb(66, 66, 66);
+  width: 70%;
+}
+
+.custom_fs_1 {
+  font-size: 12px;
+  color: #c9c9c9;
+}
+
+.custom_fs_2 {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.h_100 {
+  min-height: 87vh;
+}
+
+.header_link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header_link:hover {
+  color: inherit;
+}
+
+.bg_change {
+  background-color: rgb(66, 66, 66);
+}
+
+.chats {
+  padding: 4%;
+}
+
+.chat_text h3 {
+  font-size: 20px;
+}
+
+.chat {
+  padding: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.chat:nth-child(even) {
+  background-color: rgb(85, 85, 85);
+}
+
+.chat:hover {
+  background-color: #2F70FF;
+  color: #fff;
+}
+
+.nth_child:nth-child(even) {
+  background-color: rgb(85, 85, 85);
+  border-radius: .5rem;
+}
+
+.custom_w-75 {
+  width: 75%;
+}
+
+.nav_item {
+  list-style: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+.active {
+  background-color: #c8c8c8;
+  color: #000000;
+}
+
+.users_grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    ion-icon {
+      margin-right: 5px;
+    }
+  }
+}
+
+.d-flex-custom {
+  display: flex;
+}
+
+.nickname {
+  display: flex;
+}
+
+.welcome_input {
+  max-height: 50px;
+  background-color: rgb(66, 66, 66);
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  padding: 15px 30px;
+}
+
+.welcome_input::placeholder {
+  color: #b6b6b6;
+}
+
+.welcome_button {
+  max-height: 50px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+
+  img {
+    max-height: 30px;
+  }
+}
+
+.welcome_text {
+  width: 50%;
+  color: #4a4a4a;
+  font-size: 20px;
+}
+
+.footer {
+  border-radius: 40px 40px 0px 0px;
+}
+
+.search {
+  border-radius: 10rem;
+  padding: .5rem 3rem;
+  background-color: #4f4f4f;
+  border: none;
+  width: 50%;
+  margin-right: 10%;
+}
+
+.search2 {
+  border-radius: 10rem;
+  padding: .5rem 3rem;
+  background-color: #4f4f4f;
+  border: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search::placeholder {
+  color:#b6b6b6;
+}
+
+.custom_w-25 {
+  width: 25%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.custom_d-none2 {
+  display: none;
+}
+
+.custom_d-block2 {
+  display: flex;
+}
+
+.white {
+  color: #fff;
+  text-decoration: none;
+}
+
+.custom_p-5 {
+  padding: 5% 10%;
+}
+
+// HAMBURGER MENU
+.menu_toggle {
+  display: none;
+}
+
+.menu {
+  background-color: rgb(66, 66, 66);
+  color: #fff;
+  display: none;
+  position: absolute;
+  top: 15%;
+  right: 0%;
+  width: 100%;
+  z-index: 999;
+  height: 80%;
+  font-size: 20px;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+
+.menu ul a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu ul a li {
+  list-style-type: none;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: block;
+}
+// EINDE HAMBURGER MENU
+
+// MESSAGES STYLING
+#form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+
+#input:focus {
+  outline: none;
+}
+
+#form>button {
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#messages>li {
+  padding: 0.5rem 1rem;
+}
+
+#messages>li:nth-child(odd) {
+  background: #efefef;
+}
+// EINDE MESSAGES STYLING
+
+@media only screen and (max-width: 1200px) {
+  .d-flex-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+  }
+
+  .welcome_text {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .chat_text h3 {
+    font-size: 15px;
+  }
+
+  .people {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 750px) {
+  .menu_toggle {
+    display: block;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 30px;
+  }
+
+  .menu_toggle:hover {
+    cursor: pointer;
+  }
+
+
+  .custom_w-25 {
+    width: 100%;
+  }
+
+  .custom_d-none {
+    display: none;
+  }
+
+  .custom_d-none2 {
+    display: block;
+  }
+
+  .custom_d-block2 {
+    display: none;
+  }
+
+  .chat_text h3 {
+    font-size: 22px;
+  }
+
+  .bg {
+    // background: linear-gradient(90deg, rgb(66, 66, 66) 0%, rgb(66, 66, 66) 100%);
+    background: rgb(66, 66, 66);
+  }
+
+  .search {
+    width: 70%;
+    margin: 0 auto;
+    display: none;
+  }
+
+  .footer_text {
+    display: block;
+  }
+
+  .nickname {
+    display: none;
+  }
+
+  .custom_w-75 {
+    width: 100%;
+  }
+
+  .custom_bg {
+    background: transparent;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .message {
+    width: 100%;
+  }
+}

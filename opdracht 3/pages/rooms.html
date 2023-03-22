@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Site</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="js/index.js" defer></script>
+  <!-- ICONS -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="bg">
+    <div class="bg-black text-white p-4 header">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex">
+          <p class="fs-3 fw-semibold margin">Chatrooms</p>
+          <!-- <p class="fs-6 fw-semibold margin ms-3 text-muted align-items-end nickname">#Nickname</p> -->
+          <p class="fs-6 fw-semibold margin ms-3 text-muted align-items-end nickname">
+            <script>
+              document.querySelector('.nickname').innerHTML = '#' + localStorage.getItem("user_name");
+            </script>
+          </p>
+        </div>
+        <ul class="d-flex gap-3 margin">
+          <a href="./rooms" class="header_link">
+            <li class="nav_item px-3 py-1 active custom_d-none">Rooms<ion-icon name="chatbox-outline" class="ms-3">
+              </ion-icon>
+            </li>
+          </a>
+          <a href="./users" class="header_link">
+            <li class="nav_item px-3 py-1 bg-primary custom_d-none">Users<ion-icon name="people-outline" class="ms-3">
+              </ion-icon>
+            </li>
+          </a>
+          <a href="./" class="header_link">
+            <li class="nav_item px-3 py-1 bg-primary custom_d-none">Quit<ion-icon name="log-out-outline" class="ms-3">
+              </ion-icon>
+            </li>
+          </a>
+          <button class="menu_toggle">
+            <ion-icon name="menu-outline" class="custom_d-none2 fs-2 cursor-pointer"></ion-icon>
+          </button>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <div class="menu">
+    <ul>
+      <a href="./rooms" onclick="closeMenu();">
+        <li>Rooms<ion-icon name="chevron-forward-outline"></ion-icon>
+        </li>
+      </a>
+      <a href="./users" onclick="closeMenu();">
+        <li>Users<ion-icon name="chevron-forward-outline"></ion-icon>
+        </li>
+      </a>
+      <a href="./" onclick="closeMenu();">
+        <li>Quit<ion-icon name="chevron-forward-outline"></ion-icon>
+        </li>
+      </a>
+    </ul>
+  </div>
+
+  <!-- MAIN -->
+  <div class="d-flex">
+    <div class="custom_w-25 h_100 text-white bg_color1 d-flex flex-column chats">
+      <div class="w-100 justify-content-between chat custom_d-block2">
+        <div class="chat_text">
+          <h3>Chat 1</h3>
+          <p>Last Message 1</p>
+          <!-- <button onclick="room1()">button</button> -->
+        </div>
+        <div class="people">
+          69<ion-icon name="people-outline" class="ms-3"></ion-icon>
+        </div>
+      </div>
+      <div class="w-100 justify-content-between chat custom_d-block2">
+        <div class="chat_text">
+          <h3>Chat 2</h3>
+          <p>Last Message 2</p>
+          <!-- <button onclick="room2()">button</button> -->
+        </div>
+        <div class="people">
+          420<ion-icon name="people-outline" class="ms-3"></ion-icon>
+        </div>
+      </div>
+      <div class="w-100 justify-content-between chat custom_d-block2">
+        <div class="chat_text">
+          <h3>Chat 3</h3>
+          <p>Last Message 3</p>
+          <!-- <button onclick="room3()">button</button> -->
+        </div>
+        <div class="people">
+          69<ion-icon name="people-outline" class="ms-3"></ion-icon>
+        </div>
+      </div>
+      <div class="w-100 justify-content-between chat custom_d-block2">
+        <div class="chat_text">
+          <h3>Chat 4</h3>
+          <p>Last Message 4</p>
+          <!-- <button onclick="room4()">button</button> -->
+        </div>
+        <div class="people">
+          420<ion-icon name="people-outline" class="ms-3"></ion-icon>
+        </div>
+      </div>
+
+      <!-- MOBIELE CHATS -->
+      <a href="./chatroom" class="custom_d-none2 white nth_child">
+        <div class="d-flex w-100 justify-content-between chat">
+          <div class="chat_text">
+            <h3>Chat 1</h3>
+            <p>Last Message 1</p>
+          </div>
+          <div class="people">
+            69<ion-icon name="people-outline" class="ms-3"></ion-icon>
+          </div>
+        </div>
+      </a>
+      <a href="./chatroom" class="custom_d-none2 white nth_child">
+        <div class="d-flex w-100 justify-content-between chat">
+          <div class="chat_text">
+            <h3>Chat 2</h3>
+            <p>Last Message 2</p>
+          </div>
+          <div class="people">
+            420<ion-icon name="people-outline" class="ms-3"></ion-icon>
+          </div>
+        </div>
+      </a>
+      <a href="./chatroom" class="custom_d-none2 white nth_child">
+        <div class="d-flex w-100 justify-content-between chat">
+          <div class="chat_text">
+            <h3>Chat 3</h3>
+            <p>Last Message 3</p>
+          </div>
+          <div class="people">
+            69<ion-icon name="people-outline" class="ms-3"></ion-icon>
+          </div>
+        </div>
+      </a>
+      <a href="./chatroom" class="custom_d-none2 white nth_child">
+        <div class="d-flex w-100 justify-content-between chat">
+          <div class="chat_text">
+            <h3>Chat 4</h3>
+            <p>Last Message 4</p>
+          </div>
+          <div class="people">
+            420<ion-icon name="people-outline" class="ms-3"></ion-icon>
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+
+    <div class="w-75 p-5 custom_d-none room1">
+      <div class="message p-3 text-white your_message mt-4">
+        <span class="custom_fs_2 message_name">
+          <script>document.querySelector('.message_name').innerHTML = localStorage.getItem("user_name") + ' ';</script>
+          <i class="custom_fs_1">Said @ 04:20</i></span><br>
+        <p class="mt-1">GERDAAAA</p>
+      </div>
+      <div class="message p-3 text-white their_message mt-4">
+        <span class="custom_fs_2">gErDa <i class="custom_fs_1">Said @ 04:20</i></span><br>
+        <p class="mt-1">HOOI PETER</p>
+      </div>
+      <ul id="messages"></ul>
+    </div>
+
+    <!-- <div class="w-75 p-5 custom_d-none room2">
+      <div class="message p-3 text-white your_message mt-4">
+        <span class="custom_fs_2 message_name">
+          <script>document.querySelector('.message_name').innerHTML = localStorage.getItem("user_name") + ' ';</script>
+          <i class="custom_fs_1">Said @ 04:20</i></span><br>
+        <p class="mt-1">GERDAAAA</p>
+      </div>
+      <div class="message p-3 text-white their_message mt-4">
+        <span class="custom_fs_2">gErDa <i class="custom_fs_1">Said @ 04:20</i></span><br>
+        <p class="mt-1">HOOI PETER</p>
+      </div>
+      <ul id="messages"></ul>
+    </div>
+
+    <div class="w-75 p-5 custom_d-none room3">
+      <div class="message p-3 text-white your_message mt-4">
+        <span class="custom_fs_2 message_name">
+          <script>document.querySelector('.message_name').innerHTML = localStorage.getItem("user_name") + ' ';</script>
+          <i class="custom_fs_1">Said @ 04:20</i></span><br>
+        <p class="mt-1">GERDAAAA</p>
+      </div>
+      <div class="message p-3 text-white their_message mt-4">
+        <span class="custom_fs_2">gErDa <i class="custom_fs_1">Said @ 04:20</i></span><br>
+        <p class="mt-1">HOOI PETER</p>
+      </div>
+      <ul id="messages"></ul>
+    </div>
+
+    <div class="w-75 p-5 custom_d-none room4">
+      <div class="message p-3 text-white your_message mt-4">
+        <span class="custom_fs_2 message_name">
+          <script>document.querySelector('.message_name').innerHTML = localStorage.getItem("user_name") + ' ';</script>
+          <i class="custom_fs_1">Said @ 04:20</i></span><br>
+        <p class="mt-1">GERDAAAA</p>
+      </div>
+      <div class="message p-3 text-white their_message mt-4">
+        <span class="custom_fs_2">gErDa <i class="custom_fs_1">Said @ 04:20</i></span><br>
+        <p class="mt-1">HOOI PETER</p>
+      </div>
+      <ul id="messages"></ul>
+    </div> -->
+
+
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="bg">
+    <div class="bg-black text-black p-4 border_top w-100 user-select-none fixed-bottom footer">
+      <div class="container d-flex justify-content-between">
+        <p class="fs-3 fw-semibold margin custom_d-none footer_text">Enter chatbox</p>
+        <!-- <input type="search" class="search" placeholder="Type Your Message..."> -->
+        <form id="form" class="form" action="">
+          <input id="input" autocomplete="off" class="search form_input" placeholder="Type Your Message..." />
+          <button class="form_button">
+            <ion-icon name="send-outline"></ion-icon>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Toggle Menu
+    window.addEventListener("load", function () {
+      var button = document.querySelector('.menu_toggle');
+      var menu = document.querySelector('.menu');
+
+      button.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+        console.log('hello')
+      });
+    });
+
+    // Close Menu When Click On Link
+    function closeMenu() {
+      var menu = document.querySelector('.menu');
+      if (menu.style.display === "none") {
+        // menu.style.display = "block";
+        menu.classList.toggle('hidden');
+      } else {
+        // menu.style.display = "none";
+        menu.classList.toggle('hidden');
+      }
+    }
+  </script>
+
+
+  <!-- Socket.io Script -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+
+    var messages = document.getElementById('messages');
+    var form = document.getElementById('form');
+    var input = document.getElementById('input');
+    var count = 1;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (input.value) {
+        socket.emit('chat message', input.value);
+        input.value = '';
+        count = count + 1
+      }
+    });
+
+    socket.on('chat message', function (msg) {
+      var item = document.createElement('li');
+      var user = localStorage.getItem("user_name") + ' ';
+      
+      if (count %2 == 0) {
+        var name = item.innerHTML += '<span class="custom_fs_2">' + user + '<i class="custom_fs_1">' + "Said @ 4:20"  +'</i></span><br>';
+      } else {
+        var name = item.innerHTML += '<span class="custom_fs_2">' + "gErDa " + '<i class="custom_fs_1">' + "Said @ 4:20"  +'</i></span><br>';
+      }
+      
+      item.innerHTML = name + '<p class="mt-1">' + msg + '</p>';
+      messages.appendChild(item);
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+  </script>
+</body>
+
+</html>
